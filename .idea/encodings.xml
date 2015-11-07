@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/java/javase01/Loop.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javase01/t02/Loop.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javase01/t03/Loop.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javase01/t04/Arrays.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javase01/t05/TwoDimensionalArray.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javase01/t06/Entry.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javase01/t06/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javase01/t06/Notebook.java" charset="UTF-8" />
+  </component>
+</project>
