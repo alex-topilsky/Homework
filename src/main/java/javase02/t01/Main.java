@@ -14,20 +14,16 @@ public class Main {
         out.println("pen2.equals(pen3) = " + pen2.equals(pen3));
         out.println("pen1.equals(pen2) = " + pen1.equals(pen2));
         out.println();
-
         out.println("Симметричность:");
         out.println("pen1.equals(pen2) = " + pen1.equals(pen2));
         out.println("pen2.equals(pen1) = " + pen2.equals(pen1));
         out.println();
-
         out.println("Рефлексивность:");
         out.println("pen1.equals(pen1): " + pen1.equals(pen1));
         out.println();
-
         out.println("Ненулевая ссылка:");
         out.println("pen1.equals(null) = " + pen1.equals(null));
         out.println();
-
         out.println("pen1.hashCode(): " + pen1.hashCode());
         out.println("pen2.hashCode(): " + pen2.hashCode());
         pen2.setCost(15);
