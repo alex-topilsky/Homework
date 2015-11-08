@@ -1,4 +1,4 @@
-package javase02.t05;
+package javase02.t05test;
 
 /*
 Разработайте приложение, позволяющее формировать группы студентов по разным дисциплинам.
@@ -9,5 +9,8 @@ package javase02.t05;
 Для огранизации перечня дисциплин можно использовать перечисление.
  */
 public class MainGroup {
+    public static void main(String[] args) {
+        Group group = new Group();
 
+    }
 }
