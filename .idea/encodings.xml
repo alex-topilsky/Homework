@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/src/main/java/javase01/t02/Loop.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/javase01/t03/Loop.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javase01/t03/Loops.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/javase01/t04/Arrays.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/javase01/t05/TwoDimensionalArray.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/javase01/t06/Entry.java" charset="UTF-8" />
@@ -11,5 +11,7 @@
     <file url="file://$PROJECT_DIR$/src/main/java/javase02/name.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/javase02/t01/Main.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/javase02/t01/Pen.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/javase02/t02_03_04/StationeryMain.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

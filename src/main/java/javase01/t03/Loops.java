@@ -10,7 +10,7 @@ import static java.lang.System.out;
 Результат представить в виде таблицы, первый столбец которой – значения аргумента,
 второй - соответствующие значения функции: F(x) = tg(2x) - 3
  */
-public class Loop {
+public class Loops {
     private static Scanner scanner;
 
     public static void main(String[] args) {
