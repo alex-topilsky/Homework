@@ -11,7 +11,7 @@ public class WordProcessing {
     public static void loadFile() {
         FileInputStream fileInputStream = null;
         try {
-            fileInputStream = new FileInputStream("src//main//java//javase04//t01//WordProcessing.java");
+            fileInputStream = new FileInputStream("src//main//java//javase04//t01_1//WordProcessing.java");
 
             int content;
             while ((content = fileInputStream.read()) != -1) {
@@ -44,7 +44,7 @@ public class WordProcessing {
     public static void saveFile() {
         OutputStream outputStream = null;
         try {
-            outputStream = new FileOutputStream("src//main//java//javase04//t01//Result.txt", true);
+            outputStream = new FileOutputStream("src//main//java//javase04//t01_1//Result.txt", true);
             outputStream.write(resultFind.getBytes());
         } catch (Exception e) {
             e.printStackTrace();
