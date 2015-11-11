@@ -20,30 +20,25 @@ public class SendMoney implements Runnable {
             e.printStackTrace();
         }
 
-        int hashAcc1= bankAccountSender.hashCode();
+        int hashAcc1 = bankAccountSender.hashCode();
         int hashAcc2 = bankAccountRecipient.hashCode();
-        BankAccount bankAccount1=null;
-        BankAccount bankAccount2 =null;
+        BankAccount bankAccount1 = null;
+        BankAccount bankAccount2 = null;
 
-        if(hashAcc1<hashAcc2)
-        {
+        if (hashAcc1 < hashAcc2) {
             bankAccount1 = bankAccountRecipient;
-            bankAccount2=bankAccountSender;
-        }else
-        {
+            bankAccount2 = bankAccountSender;
+        } else {
             bankAccount2 = bankAccountRecipient;
-            bankAccount1=bankAccountSender;
+            bankAccount1 = bankAccountSender;
         }
 
-        synchronized (bankAccount1){
-            synchronized (bankAccount2)
-            {
+        synchronized (bankAccount1) {
+            synchronized (bankAccount2) {
                 bankAccountSender.withdraw(deposit);
                 bankAccountRecipient.deposit(deposit);
             }
         }
-       // bankAccountSender.sendMoney(deposit, bankAccountRecipient);
-
     }
 }
 

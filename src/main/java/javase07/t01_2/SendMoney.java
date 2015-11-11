@@ -1,11 +1,14 @@
 package javase07.t01_2;
 
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 public class SendMoney implements Runnable {
 
     BankAccount bankAccountSender;
     BankAccount bankAccountRecipient;
     double deposit;
-
+    Lock lock = new ReentrantLock();
 
     SendMoney(BankAccount bankAccountSender, BankAccount bankAccountRecipient, double deposit) {
         this.bankAccountSender = bankAccountSender;
@@ -21,9 +24,15 @@ public class SendMoney implements Runnable {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
-            bankAccountSender.sendMoney(deposit, bankAccountRecipient);
-
+        try {
+            lock.lock();
+            bankAccountSender.withdraw(deposit);
+            bankAccountRecipient.deposit(deposit);
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        } finally {
+            lock.unlock();
+        }
     }
 }
 

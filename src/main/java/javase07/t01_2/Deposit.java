@@ -1,10 +1,13 @@
 package javase07.t01_2;
 
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 public class Deposit implements Runnable {
 
     BankAccount bankAccount;
     double deposit;
-
+    private Lock lock = new ReentrantLock();
 
     Deposit(BankAccount bankAccount, double deposit) {
         this.bankAccount = bankAccount;
@@ -12,16 +15,20 @@ public class Deposit implements Runnable {
         new Thread(this, "Deposit " + bankAccount.getId()).start();
     }
 
- @Override
+    @Override
     public void run() {
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
+        try {
+            lock.lock();
             bankAccount.deposit(deposit);
-
-
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        } finally {
+            lock.unlock();
+        }
     }
 }
