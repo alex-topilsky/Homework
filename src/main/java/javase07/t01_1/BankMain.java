@@ -9,6 +9,7 @@ public class BankMain {
      */
 
     public static void main(String[] args) throws InterruptedException {
+        System.out.println("HH");
         Bank bank = new Bank();
         bank.loadFile();
         bank.operations();

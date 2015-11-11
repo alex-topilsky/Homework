@@ -11,6 +11,7 @@ public class Deposit implements Runnable{
         this.deposit = deposit;
         new Thread(this, "Deposit " + bankAccount.getId()).start();
     }
+
 @Override
     public void run()
     {
@@ -19,6 +20,8 @@ public class Deposit implements Runnable{
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        bankAccount.deposit(deposit);
+        synchronized (bankAccount) {
+            bankAccount.deposit(deposit);
+        }
     }
 }

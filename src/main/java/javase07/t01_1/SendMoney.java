@@ -19,7 +19,30 @@ public class SendMoney implements Runnable {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        bankAccountSender.sendMoney(deposit, bankAccountRecipient);
+
+        int hashAcc1= bankAccountSender.hashCode();
+        int hashAcc2 = bankAccountRecipient.hashCode();
+        BankAccount bankAccount1=null;
+        BankAccount bankAccount2 =null;
+
+        if(hashAcc1<hashAcc2)
+        {
+            bankAccount1 = bankAccountRecipient;
+            bankAccount2=bankAccountSender;
+        }else
+        {
+            bankAccount2 = bankAccountRecipient;
+            bankAccount1=bankAccountSender;
+        }
+
+        synchronized (bankAccount1){
+            synchronized (bankAccount2)
+            {
+                bankAccountSender.withdraw(deposit);
+                bankAccountRecipient.deposit(deposit);
+            }
+        }
+       // bankAccountSender.sendMoney(deposit, bankAccountRecipient);
 
     }
 }
