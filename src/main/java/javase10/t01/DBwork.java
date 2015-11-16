@@ -24,14 +24,14 @@ public class DBwork {
                 Statement statement = connection.createStatement();
             ) {
             //Добавить запись
-//            statement.execute("INSERT INTO user(name, email, age) VALUES('Piter', 'piter@mail.com', 5)");
-//            statement.execute("INSERT INTO user(name, email, age) VALUES('Alex', 'alex@mail.com', 25)");
-//            statement.execute("INSERT INTO user(name, email, age) VALUES('Dima', 'dima@mail.com', 15)");
-//            statement.execute("INSERT INTO user(name, email, age) VALUES('Vova', 'vova@mail.com', 35)");
+            statement.execute("INSERT INTO user(name, email, age) VALUES('Piter', 'piter@mail.com', 5)");
+            statement.execute("INSERT INTO user(name, email, age) VALUES('Alex', 'alex@mail.com', 25)");
+            statement.execute("INSERT INTO user(name, email, age) VALUES('Dima', 'dima@mail.com', 15)");
+            statement.execute("INSERT INTO user(name, email, age) VALUES('Vova', 'vova@mail.com', 35)");
 
             //Обновить записи
-            //statement.executeUpdate("UPDATE user SET name ='Karl', email ='karl@karl.ru' WHERE id = 2");
-            //statement.executeUpdate("UPDATE user SET age = 11 WHERE name = 'Piter'");
+            statement.executeUpdate("UPDATE user SET name ='Karl', email ='karl@karl.ru' WHERE id = 2");
+            statement.executeUpdate("UPDATE user SET age = 11 WHERE name = 'Piter'");
 
             //Выбрать все записи в таблице
             ResultSet resultSet1 = statement.executeQuery("SELECT * FROM user");
